@@ -16,7 +16,7 @@ void MoviesFunc::addMovie(string &name, double rating) {
 
 void MoviesFunc::printAllSorted() {
     for (auto &mv : movies_) {
-        cout << mv.first << ", " << mv.second << endl;
+        cout <<mv.first << ", " << fixed << setprecision(1) << mv.second << "\n";
     }
 }
 
