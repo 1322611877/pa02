@@ -2,6 +2,7 @@
 #include <iostream>
 #include <iomanip>
 #include <vector>
+#include <algorithm>
 
 
 using namespace std;
@@ -37,5 +38,11 @@ vector<Movie> MoviesFunc::findByprefix(string &prefix){
         result.push_back({name,it->second});
         ++it;
     }
+    sort(result.begin(), result.end(), []( Movie& a,  Movie& b) {
+    if (a.rating != b.rating) {
+        return a.rating > b.rating;
+    }
+    return a.name < b.name;
+    });
         return result;
     }
