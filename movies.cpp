@@ -23,11 +23,13 @@ void MoviesFunc::printAllSorted() {
 vector<Movie> MoviesFunc::findByprefix(string &prefix){
     vector<Movie> result;
     if (prefix.empty()) return result;
+    //find the first movie matches the prefix
     auto it = movies_.lower_bound(prefix);
     int size = prefix.size();
-
+//IF find the prefix
     while (it != movies_.end()) {
         const string &name = it->first;
+        //Two conditions to break the while loop name size < prefix size or doesn't match
         if (name.size() < size || name.compare(0, size, prefix) != 0)
             break;
         result.push_back({name,it->second});
