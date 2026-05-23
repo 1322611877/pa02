@@ -1,6 +1,6 @@
 // Winter'24
 // Instructor: Diba Mirza
-// Student name:
+// Student name: Jialu XING
 #include <iostream>
 #include <fstream>
 #include <string>
@@ -13,6 +13,8 @@
 #include <set>
 #include <queue>
 #include <sstream>
+#include <vector>
+
 using namespace std;
 
 #include "utilities.h"
